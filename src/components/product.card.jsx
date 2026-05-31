@@ -13,10 +13,10 @@ export default function ProductCard({
   const [isFavorite, setIsFavorite] = useState(false);
 
   function add() {
-    setQuantity((prev) => prev + 1);
+    setQuantity((prev) => (prev < initialStock ? prev + 1 : prev));
   }
   function remove() {
-    setQuantity((prev) => prev - 1);
+    setQuantity((prev) => (prev > 0 ? prev - 1 : prev));
   }
 
   return (

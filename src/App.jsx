@@ -9,7 +9,7 @@ function App() {
     price: 50,
     category: "Shoes",
     description: "These shoes are designed for athletes.",
-    initialStock: 1000,
+    initialStock: 10,
   };
   return (
     <>
