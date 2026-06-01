@@ -19,6 +19,10 @@ export default function ProductCard({
     setQuantity((prev) => (prev > 0 ? prev - 1 : prev));
   }
 
+  function toggleFavorite() {
+    setIsFavorite((prev) => (prev ? false : true));
+  }
+
   return (
     <>
       <h2>{name}</h2>
@@ -31,6 +35,7 @@ export default function ProductCard({
 
       <SimpleButton name={"+"} onClick={add} />
       <SimpleButton name={"-"} onClick={remove} />
+      <SimpleButton name={"Favorite"} onClick={toggleFavorite} />
     </>
   );
 }
